@@ -1,4 +1,1 @@
-这里只是源代码，无法直接运行，bean文件夹里存放的是JavaBean，servlet文件夹里存放的是servlet控制器，
-WebContent里存放的是网页，是直接在eclipse工程里取出来的。
-把SocialNetwork文件夹放到tomcat的webapps文件夹下，开启tomcat，
-在浏览器中输入http://localhost:8080/SocialNetwork/ 就能进入到首页
+It is network models whhic include random graph model, small world model and preferential attachment model. There are also include four evaluation algorithm of model which are average degree, degree distribution, clustering coefficient and average shortest paths length. It is B/S architecture.
