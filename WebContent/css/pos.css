@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.pos1{
+	position:absolute;
+	left:600px;
+	top:50px;
+}
+.pos2{
+	position:absolute;
+	left:600px;
+	top:200px;
+}
+.pos3{
+	position:absolute;
+	left:600px;
+	top:350px;
+}

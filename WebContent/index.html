@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Network Models</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="description" content="Slicebox - 3D Image Slider with Fallback" />
+<meta name="keywords" content="jquery, css3, 3d, webkit, fallback, slider, css3, 3d transforms, slices, rotate, box, automatic" />
+<meta name="author" content="wpy" />
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Network Models <span>Homework for Social Media Mining</span></h1>
+        <div class="more">
+            <ul id="sb-examples">
+                <li><a href="randomGraph.jsp" target="_blank">Random Graph</a></li>
+                <li><a href="smallWorld.jsp" target="_blank">Small World</a></li>
+                <li><a href="preferentialAttachment.jsp" target="_blank">Preferential Attachment</a></li>
+                <li><a href="statistics.jsp" target="_blank">Statistics</a></li>            
+            </ul>
+        </div>
+
+        <div class="wrapper">
+            <ul id="sb-slider" class="sb-slider">
+                <li>
+                    <a href="randomGraph.jsp" target="_blank">
+                    <img src="images/4.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>random graph</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="smallWorld.jsp" target="_blank">
+                    <img src="images/1.jpg" alt="image2"/></a>
+                    <div class="sb-description">
+                        <h3>small world</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="preferentialAttachment.jsp" target="_blank">
+                    <img src="images/7.jpg" alt="image3"/></a>
+                    <div class="sb-description">
+                        <h3>preferential attachment</h3>
+                    </div>
+                </li>     
+                <li>
+                    <a href="statistics.jsp" target="_blank">
+                    <img src="images/2.jpg" alt="image4"/></a>
+                    <div class="sb-description">
+                        <h3>statistics</h3>
+                    </div>
+                </li>                                       
+            </ul>
+
+            <div id="shadow" class="shadow"></div>
+
+            <div id="nav-arrows" class="nav-arrows">
+                <a href="#">Next</a>
+                <a href="#">Previous</a>
+            </div>
+
+            <div id="nav-options" class="nav-options">
+                <span id="navPlay">Play</span>
+                <span id="navPause">Pause</span>
+            </div>
+
+        </div><!-- /wrapper -->
+
+        <p class="info"><strong>The 18 group</strong></p>
+
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var Page = (function() {
+                var $navArrows = $( '#nav-arrows' ).hide(),
+                    $navOptions = $( '#nav-options' ).hide(),
+                    $shadow = $( '#shadow' ).hide(),
+                    slicebox = $( '#sb-slider' ).slicebox( {
+                        onReady : function() {
+                            $navArrows.show();
+                            $navOptions.show();
+                            $shadow.show();
+                        },
+                        orientation : 'h',
+                        cuboidsCount : 3
+                    } ),
+                    init = function() {
+                        initEvents();
+                    },
+                    initEvents = function() {
+                        // add navigation events
+                        $navArrows.children( ':first' ).on( 'click', function() {
+                            slicebox.next();
+                            return false;
+                        } );
+                        $navArrows.children( ':last' ).on( 'click', function() {
+                            slicebox.previous();
+                            return false;
+                        } );
+                        $( '#navPlay' ).on( 'click', function() {
+                            slicebox.play();
+                            return false;
+                        } );
+                        $( '#navPause' ).on( 'click', function() {
+                            slicebox.pause();
+                            return false;
+                        } );
+                    };
+                    return { init : init };
+            })();
+            Page.init();
+        });
+    </script>
+</body>
+</html>	

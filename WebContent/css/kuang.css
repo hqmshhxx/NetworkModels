@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+.pos{
+	margin:0 auto;
+	width:1000px;
+	height:1000px;	
+}
+.pos1{
+	float:left;
+	width:100;	
+}
+.pos2{	
+	width:200px;	
+}
+.pos3{
+    float:left;
+	width:500px;
+	height:500px;	
+	
+}

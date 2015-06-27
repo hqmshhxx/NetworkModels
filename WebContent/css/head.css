@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+.colfirst a {
+	text-decoration: none;
+	color: black;
+}
+
+.colfirst a:hover {
+	color: red;
+}
